@@ -1,20 +1,22 @@
 
 
-        .container {
+        .sixpillar-container {
             position: relative;
             max-width: 1200px;
             margin: 0 auto;
         }
 
+        
         .header {
             margin-bottom: 2rem;
+            padding-inline:1rem ;
         }
 
         .subtitle {
-            color: #666;
-            font-size: 0.9rem;
+            color: #8f8f8f;
+            font-size: 1rem;
             margin-bottom: 0.5rem;
-            text-align: start;
+            text-align: center;
         }
 
         .title {
@@ -24,18 +26,19 @@
             margin-bottom: 2rem;
         }
 
-        .title h1 {
-            background: linear-gradient(to right, #ef626b, #f6bf71);
+        .title h2 {
+            background: linear-gradient(to right, #ef626b, #f5ba69);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
             font-weight: normal;
             font-style: italic;
+            font-size:1.3rem; 
         }
         
         .title span {
             color: #525252;
-            font-size:x-large;
+            font-size:medium;
             letter-spacing: 1px;
         }
 
@@ -55,20 +58,34 @@
             font-size: 0.9rem;
             border: 1px solid #eee;
         }
-
+        
         .nav-item.active {
             background: #000;
             color: white;
         }
-
+        
+        .cards-container {
+            overflow-x: auto;
+            scrollbar-width: none; /* For Firefox */
+            -ms-overflow-style: none; /* For Internet Explorer and Edge */
+            min-height: 500px;
+        }
+        
+        .cards-container::-webkit-scrollbar {
+            display: none; /* For Chrome, Safari, and Opera */
+        }
+        
         .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            display: flex;
             gap: 2rem;
+            width:2150px;
+            padding-left: 1rem;
         }
 
         .card {
-            background: white;
+            /* min-width: 500px; */
+            max-width:90vw;
+            /* height: 420px; */
             border-radius: 1rem;
             overflow: hidden;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
@@ -76,8 +93,8 @@
 
         .card-image {
             width: 100%;
-            height: 200px;
-            background-size: cover;
+            height: 280px;
+            background-size:cover;
             background-position: center;
             position: relative;
         }
@@ -101,50 +118,69 @@
             border-radius: 50%;
         }
 
-        .metric-icon.blue {
-            background: #4dabf7;
-        }
-
-        .metric-icon.pink {
-            background: #ff6b6b;
-        }
-
-        .metric-icon.green {
-            background: #51cf66;
-        }
-
         .card-content {
             padding: 1.5rem;
         }
 
         .card-title {
+            text-align: start;
             font-size: 1.25rem;
             margin-bottom: 0.5rem;
             color: #333;
         }
 
         .card-text {
+            text-align: start;
             color: #666;
             line-height: 1.5;
             font-size: 0.9rem;
         }
+
+
+        @media (min-width: 768px) {
+            .subtitle {
+                text-align: start;
+            }
+            .title h2 {
+                font-size:xx-large; 
+                font-weight: normal;
+                font-style: italic;
+            }
+            
+            .title span {
+              
+                font-size:x-large;
+                letter-spacing: 1px;
+            }
+            .cards {
+                width:3000px;
+            }
+        }
+
 
         .navigation-arrows {
             position: absolute;
             top: 2rem;
             right: 2rem;
             display: flex;
-            gap: 0.5rem;
+            gap: 1rem;
         }
 
         .arrow {
-            width: 40px;
-            height: 40px;
+            width: 45px;
+            height: 45px;
             border-radius: 50%;
             background: white;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            border: 1px solid #eee;
+            border: 1px solid #c9c9c9;
         }
+
+
+
+
+
+
+        

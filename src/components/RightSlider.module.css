@@ -1,7 +1,7 @@
 :root {
     --size: clamp(10rem, 1rem + 40vmin, 30rem);
     --gap: calc(var(--size) / 14);
-    --duration: 60s;
+    --duration: 20s;
     --scroll-start: 0;
     --scroll-end: calc(-100% - var(--gap));
     --mask-direction: to bottom; /* Default direction set to vertical */
@@ -45,23 +45,23 @@
     }
   }
   
-  .marquee svg {
+  .marquee img {
     display: grid;
-    place-items: center;
+    /* place-items: center; */
     width: calc(var(--size) / 1.5); /* Adjusted for vertical */
     fill: var(--color-text);
     background: var(--color-bg-accent);
-    aspect-ratio: 1; /* Default square aspect ratio for vertical */
-    padding: calc(var(--size) / 6);
+    /* aspect-ratio: 1; */
+    /* padding: calc(var(--size) / 6); */
     border-radius: 0.5rem;
   }
   
   /* Parent wrapper */
   .wrapper {
     display: flex;
-    flex-direction: row; /* Updated for vertical default */
+    flex-direction: column; /* Updated for vertical default */
     gap: var(--gap);
-    height: 100vh; /* Full vertical height */
+    height: 70vh; /* Full vertical height */
   }
   
   @keyframes scroll-y {
@@ -73,7 +73,7 @@
     }
   }
   
-  @keyframes fade {
+  /* @keyframes fade {
     to {
       opacity: 0;
       visibility: hidden;
@@ -95,20 +95,5 @@
     animation: fade 400ms 4s ease-out forwards;
     user-select: none;
   }
-  
-  .toggle svg {
-    --size: 1.5rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: var(--size);
-    height: var(--size);
-    fill: currentcolor;
-    transform: translate(-50%, -50%);
-    transition: transform 300ms cubic-bezier(0.25, 1, 0.5, 1);
-  }
-  
-  .toggle--vertical svg {
-    transform: translate(-50%, -50%) rotate(-90deg);
-  }
+   */
   
