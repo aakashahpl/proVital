@@ -10,21 +10,21 @@ export default function RightSlider() {
         <div className={styles.marquee}>
           <div className={styles.marquee__group}>
             {rightImages.map((imageName, index) => (
-              <img
+              <div
                 key={index}
-                src={`/images/${imageName}.jpeg`}
-                alt={`Right Image ${index}`}
-              />
+                className={styles.imageContainer}
+                style={{ backgroundImage: `url(/images/${imageName}.jpeg)` }}
+              ></div>
             ))}
           </div>
 
           <div aria-hidden="true" className={styles.marquee__group}>
             {rightImages.map((imageName, index) => (
-              <img
+              <div
                 key={index}
-                src={`/images/${imageName}.jpeg`}
-                alt={`Right Image ${index}`}
-              />
+                className={styles.imageContainer}
+                style={{ backgroundImage: `url(/images/${imageName}.jpeg)` }}
+              ></div>
             ))}
           </div>
         </div>

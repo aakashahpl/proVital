@@ -3,32 +3,31 @@ import './LeftSlider.css';
 
 const leftImages = ['left-0', 'left-1', 'left-2', 'left-3'];
 
-
 export default function LeftSlider() {
   return (
     <div>
-      <article class="wrapper">
-        <div class="marquee">
-          <div class="marquee__group">
+      <article className="wrapper">
+        <div className="marquee">
+          <div className="marquee__group">
             {leftImages.map((imageName, index) => (
-              <img
+              <div
                 key={index}
-                src={`/images/${imageName}.jpeg`}
-                alt={`Left Image ${index}`}
-              />
+                className="image-container"
+                style={{ backgroundImage: `url(/images/${imageName}.jpeg)` }}
+              ></div>
             ))}
           </div>
-          <div aria-hidden="true" class="marquee__group">
+          <div aria-hidden="true" className="marquee__group">
             {leftImages.map((imageName, index) => (
-              <img
+              <div
                 key={index}
-                src={`/images/${imageName}.jpeg`}
-                alt={`Left Image ${index}`}
-              />
+                className="image-container"
+                style={{ backgroundImage: `url(/images/${imageName}.jpeg)` }}
+              ></div>
             ))}
           </div>
         </div>
       </article>
     </div>
-  )
+  );
 }

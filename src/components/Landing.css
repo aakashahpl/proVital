@@ -35,7 +35,7 @@ main {
     width: 50%;
 }
 
-.content-heading{
+.content{
     flex-direction: column;
 }
 
@@ -152,7 +152,7 @@ button[type="submit"]:hover {
         flex: 1;
     }
     .slanting-div { 
-        margin-top: 0px; 
+        margin-top: -15px; 
       }
       .content h1 {
         font-size: 2.7rem;
@@ -160,7 +160,7 @@ button[type="submit"]:hover {
     .content-tagline {
         font-size: 1.3rem;    
     }
-    .content-heading{
+    .content{
         display: flex;
         flex-direction: column;
         justify-content: center;

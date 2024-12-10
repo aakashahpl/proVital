@@ -30,7 +30,7 @@ export default function Main() {
               <RightSlider />
             </div>
           )}
-          <div className="content-heading">
+          <div className="content">
             <h1 className="content-main">Book an appointment with <span className="highlight">lifestyle medicine</span> experts</h1>
             <p className="content-tagline">Optimize your lifestyle and reverse chronic diseases.</p>
           </div>
