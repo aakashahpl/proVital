@@ -81,7 +81,6 @@ main {
     z-index: 50;
 }
 
-
 .input-group {
     position: relative;
     padding-inline: 1rem;
@@ -91,6 +90,7 @@ main {
     border: 1px solid #e0e0e0;
     border-radius: 0.3rem;
     gap:1rem;   
+    width:100%;
 }
 
  .input-group input {
@@ -119,6 +119,7 @@ button[type="submit"] {
     justify-content: center;
     gap:0.7rem;
     font-size: 16px;
+    width: 100%;
 }
 
 button[type="submit"]:hover {
@@ -146,6 +147,8 @@ button[type="submit"]:hover {
     .search-form {
         flex-direction: row;
         top:28rem;
+        width: 90%;
+       
     }
 
     .input-group {
@@ -165,5 +168,9 @@ button[type="submit"]:hover {
         flex-direction: column;
         justify-content: center;
     }
+    button[type="submit"] {
+        width: auto;
+    }
+
 } 
 

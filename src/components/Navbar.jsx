@@ -74,11 +74,17 @@ export const Navbar = () => {
           <div className='auth-container'>
             <div className='auth'>
               <h3>Doctor</h3>
-              <a href='/' className='auth-button'>Login   Sign up</a>
+              <a href='/' className='auth-button'>
+                <span>Login</span>
+                <span>Sign up</span>
+              </a>
             </div>
             <div className='auth patient'>
               <h3>Patients</h3>
-              <a href='/' className='auth-button'>Login   Sign up</a>
+              <a href='/' className='auth-button'>
+                <span>Login</span>
+                <span>Sign up</span>
+              </a>
             </div>
           </div>
           <div className='option-container'>
