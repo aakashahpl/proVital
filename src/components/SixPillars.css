@@ -22,7 +22,6 @@
         .title {
             display: flex;
             align-items: center;
-            gap: 1rem;
             margin-bottom: 2rem;
         }
 
@@ -138,6 +137,9 @@
 
 
         @media (min-width: 768px) {
+            .title {
+                gap:1rem;
+            }
             .subtitle {
                 text-align: start;
             }
