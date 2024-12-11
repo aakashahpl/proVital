@@ -78,12 +78,12 @@
         .cards {
             display: flex;
             gap: 2rem;
-            width:2150px;
+            width:2200px;
             padding-left: 1rem;
         }
 
         .card {
-            /* min-width: 500px; */
+            flex:1;
             max-width:90vw;
             /* height: 420px; */
             border-radius: 1rem;
