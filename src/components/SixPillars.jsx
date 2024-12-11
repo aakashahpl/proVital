@@ -49,20 +49,18 @@ const cards = [
 ];
 
 export default function SixPillars() {
-
-
     const [isMobile, setIsMobile] = useState(false);
+    const [currentActive, setCurrentActive] = useState(0);
 
     useEffect(() => {
         const updateView = () => {
             setIsMobile(window.innerWidth <= 1000); 
         };
         window.addEventListener('resize', updateView);
+        
         updateView(); 
         return () => window.removeEventListener('resize', updateView);
     }, []);
-
-
 
     const cardsContainerRef = useRef(null);
 
@@ -77,6 +75,27 @@ export default function SixPillars() {
             cardsContainerRef.current.scrollBy({ left: 510, behavior: 'smooth' });
         }
     };
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (cardsContainerRef.current) {
+                const scrollLeft = cardsContainerRef.current.scrollLeft;
+                const index = Math.floor(Math.abs(scrollLeft) / 510);
+                setCurrentActive(index);
+            }
+        };
+
+        const container = cardsContainerRef.current;
+        if (container) {
+            container.addEventListener('scroll', handleScroll);
+        }
+
+        return () => {
+            if (container) {
+                container.removeEventListener('scroll', handleScroll);
+            }
+        };
+    }, []);
 
     return (
         <div className="sixpillar-container">
@@ -93,7 +112,7 @@ export default function SixPillars() {
                     {cards.map((card, index) => (
                         <button
                             key={index}
-                            className={`nav-item ${index === 0 ? 'active' : ''}`}
+                            className={`nav-item ${index === currentActive ? 'active' : ''}`}
                         >
                             {card.title}
                         </button>
@@ -139,9 +158,6 @@ export default function SixPillars() {
                     </div>
                 </div>
             )}
-
-
         </div>
-
     );
 }

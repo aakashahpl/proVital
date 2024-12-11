@@ -155,7 +155,10 @@
                 letter-spacing: 1px;
             }
             .cards {
-                width:3000px;
+                width:4000px;
+            }
+            .card{
+                max-width: 490px;
             }
         }
 
