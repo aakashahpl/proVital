@@ -9,18 +9,22 @@ import { IoArrowForward } from "react-icons/io5";
 export const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [loginMenuOpen, setLoginMenuOpen] = useState(false);
 
   useEffect(() => {
     const updateView = () => {
-      setIsMobile(window.innerWidth <= 1000); // Adjust 1000px based on your design breakpoint
+      setIsMobile(window.innerWidth <= 1000);
     };
     window.addEventListener('resize', updateView);
-    updateView(); // Call it initially
+    updateView();
     return () => window.removeEventListener('resize', updateView);
   }, []);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
+  };
+  const toggleLoginMenu = () => {
+    setLoginMenuOpen(!loginMenuOpen);
   };
 
   return (
@@ -36,24 +40,45 @@ export const Navbar = () => {
           <a href="#" className="nav-option">Books</a>
           <a href="#" className="nav-option">Speakers</a>
           <a href="#" className="nav-option">Doctors</a>
-          <a href="#" className="login-option">Login / Signup <IoIosArrowDown /></a>
+          <a href="#" className="login-option" onClick={toggleLoginMenu}>Login / Signup <IoIosArrowDown /></a>
+          {loginMenuOpen && (
+            <div className='auth-container-2'>
+              <div className='auth'>
+                <h3>Doctor</h3>
+                <a href='/' className='auth-button'>
+                  <span>Login</span>
+                  <span>Sign up</span>
+                </a>
+              </div>
+              <div className='auth patient'>
+                <h3>Patients</h3>
+                <a href='/' className='auth-button'>
+                  <span>Login</span>
+                  <span>Sign up</span>
+                </a>
+              </div>
+            </div>
+
+          )}
         </div>
       )}
+
       {isMobile && (
         <div onClick={toggleMenu}>
           {menuOpen ? <RxCross2 size={25} /> : <GiHamburgerMenu size={25} />}
         </div>
       )}
+
       {menuOpen && (
         <div className="mobile-nav">
-          <div className='auth-container'> 
+          <div className='auth-container'>
             <div className='auth'>
               <h3>Doctor</h3>
-              <h3 className='auth-button'>Login   Sign up</h3>
+              <a href='/' className='auth-button'>Login   Sign up</a>
             </div>
             <div className='auth patient'>
               <h3>Patients</h3>
-              <h3 className='auth-button'>Login   Sign up</h3>
+              <a href='/' className='auth-button'>Login   Sign up</a>
             </div>
           </div>
           <div className='option-container'>

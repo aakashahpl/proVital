@@ -74,22 +74,44 @@ nav {
     border-width: 1px;
     border-style: solid;
     border-radius: 6px;
+    
 }
+.auth-container-2 {
+    position: absolute;
+    top: 3rem;
+    right: 0;
+    background-color: white;
+    width: 22rem;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+
 .auth{
     display: flex;
     width: 100%;
     justify-content: space-between;
     padding-inline: 2rem;
+    align-items: center;
 }
+
+.auth-button{
+    display: flex;
+    color:#426be6 !important;
+    text-decoration: underline !important;
+    gap: 1rem;
+}
+
 
 @media (min-width: 768px) {
     .nav-links {
+        position:relative;
         display: flex;
        
     }
 
     nav{
-        padding-inline: 10rem;
+        padding-inline: 16rem;
     }
 
     .nav-links a {
