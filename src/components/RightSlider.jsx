@@ -13,7 +13,7 @@ export default function RightSlider() {
               <div
                 key={index}
                 className={styles.imageContainer}
-                style={{ backgroundImage: `url(/images/${imageName}.jpeg)` }}
+                style={{ backgroundImage: `url(/images/${imageName}.jpg)` }}
               ></div>
             ))}
           </div>
@@ -23,7 +23,7 @@ export default function RightSlider() {
               <div
                 key={index}
                 className={styles.imageContainer}
-                style={{ backgroundImage: `url(/images/${imageName}.jpeg)` }}
+                style={{ backgroundImage: `url(/images/${imageName}.jpg)` }}
               ></div>
             ))}
           </div>

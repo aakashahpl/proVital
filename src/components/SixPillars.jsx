@@ -6,42 +6,42 @@ import { IoArrowForward } from "react-icons/io5";
 const cards = [
     {
         title: "Nutrition",
-        imagePath: "/carousel/carousel-0.jpeg",
+        imagePath: "/carousel/carousel-0.jpg",
         description: "Evidence supports the use of a whole food, plant-predominant diet to prevent, treat and reverse chronic illness.",
         iconPath: "/icons/Vector.png",
         tag: "121/80 mmHg"
     },
     {
         title: "Physical activity",
-        imagePath: "/carousel/carousel-1.jpeg",
+        imagePath: "/carousel/carousel-1.jpg",
         description: "Regular physical activity is key to managing weight, improving mental health, and reducing risk of chronic disease.",
         iconPath: "/icons/Vector (1).png",
         tag: "32 minutes"
     },
     {
         title: "Restorative sleep",
-        imagePath: "/carousel/carousel-2.jpeg",
+        imagePath: "/carousel/carousel-2.jpg",
         description: "Consistent, quality sleep is essential for cognitive function and physical health.",
         iconPath: "/icons/Vector (2).png",
         tag: "8 hours"
     },
     {
         title: "Stress management",
-        imagePath: "/carousel/carousel-3.jpeg",
+        imagePath: "/carousel/carousel-3.jpg",
         description: "Effective stress management techniques are crucial for mental well-being and overall health.",
         iconPath: "/icons/Vector (3).png",
         tag: "60 bpm"
     },
     {
         title: "Social connection",
-        imagePath: "/carousel/carousel-4.jpeg",
+        imagePath: "/carousel/carousel-4.jpg",
         description: "Strong social connections are associated with a lower risk of many chronic diseases and enhanced mental health.",
         iconPath: "/icons/Vector (1).png",
         tag: "Feeling better"
     },
     {
         title: "Substance abuse",
-        imagePath: "/carousel/carousel-5.jpeg",
+        imagePath: "/carousel/carousel-5.jpg",
         description: "Avoiding tobacco, limiting alcohol use, and abstaining from harmful substances are vital for long-term health.",
         iconPath: "/icons/Vector (4).png",
         tag: "62 days"

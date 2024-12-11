@@ -13,7 +13,7 @@ export default function LeftSlider() {
               <div
                 key={index}
                 className="image-container"
-                style={{ backgroundImage: `url(/images/${imageName}.jpeg)` }}
+                style={{ backgroundImage: `url(/images/${imageName}.jpg)` }}
               ></div>
             ))}
           </div>
@@ -22,7 +22,7 @@ export default function LeftSlider() {
               <div
                 key={index}
                 className="image-container"
-                style={{ backgroundImage: `url(/images/${imageName}.jpeg)` }}
+                style={{ backgroundImage: `url(/images/${imageName}.jpg)` }}
               ></div>
             ))}
           </div>

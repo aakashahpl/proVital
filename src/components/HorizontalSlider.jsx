@@ -13,7 +13,7 @@ export default function HorizontalSlider() {
               <div
                 key={index}
                 className="imageContainer3"
-                style={{ backgroundImage: `url(/images/${imageName}.jpeg)` }}
+                style={{ backgroundImage: `url(/images/${imageName}.jpg)` }}
               ></div>
             ))}
           </div>
@@ -22,7 +22,7 @@ export default function HorizontalSlider() {
               <div
                 key={index}
                 className="imageContainer3"
-                style={{ backgroundImage: `url(/images/${imageName}.jpeg)` }}
+                style={{ backgroundImage: `url(/images/${imageName}.jpg)` }}
               ></div>
             ))}
           </div>
